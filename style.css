@@ -1,0 +1,732 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #0a0a0a;
+    color: #ffffff;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+
+/* NAVBAR */
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background: rgba(10, 10, 10, 0.92);
+    border-bottom: 1px solid #252525;
+    backdrop-filter: blur(10px);
+}
+
+.nav-container {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 27px;
+    font-weight: 900;
+    letter-spacing: 2px;
+}
+
+.logo span,
+h1 span,
+h2 span,
+.section-title span,
+.section-label,
+.hero-small {
+    color: #d7ff00;
+}
+
+nav {
+    display: flex;
+    gap: 30px;
+}
+
+nav a {
+    font-size: 14px;
+    font-weight: bold;
+    color: #bbb;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #d7ff00;
+}
+
+.join-btn {
+    background: #d7ff00;
+    border: none;
+    padding: 13px 22px;
+    font-weight: 900;
+    cursor: pointer;
+}
+
+.menu-btn {
+    display: none;
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 28px;
+}
+
+
+/* BUTTON */
+
+.btn {
+    display: inline-block;
+    padding: 15px 25px;
+    font-weight: 900;
+    transition: 0.3s;
+}
+
+.primary-btn {
+    background: #d7ff00;
+    color: #000;
+}
+
+.primary-btn:hover {
+    background: white;
+    transform: translateY(-3px);
+}
+
+.secondary-btn {
+    border: 1px solid #777;
+    margin-left: 10px;
+}
+
+.secondary-btn:hover {
+    border-color: #d7ff00;
+    color: #d7ff00;
+}
+
+
+/* HERO */
+
+.hero {
+    height: 100vh;
+    min-height: 700px;
+    position: relative;
+
+    background-image:
+        url("https://cdn.unityfitness.vn/2024/10/phong-tap-gym-thuduc-pvd-4.webp");
+
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(
+            90deg,
+            rgba(0, 0, 0, 0.92),
+            rgba(0, 0, 0, 0.45),
+            rgba(0, 0, 0, 0.75)
+        );
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-small {
+    font-size: 14px;
+    font-weight: 900;
+    letter-spacing: 4px;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: clamp(55px, 9vw, 110px);
+    line-height: 0.92;
+    max-width: 850px;
+    font-weight: 1000;
+    letter-spacing: -5px;
+}
+
+.hero-description {
+    max-width: 600px;
+    color: #bbb;
+    line-height: 1.7;
+    margin: 30px 0;
+    font-size: 17px;
+}
+
+.hero-buttons {
+    margin-top: 30px;
+}
+
+
+/* STATS */
+
+.stats {
+    background: #d7ff00;
+    color: #000;
+    padding: 35px 0;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    text-align: center;
+}
+
+.stats h2 {
+    font-size: 40px;
+}
+
+.stats p {
+    font-size: 13px;
+    font-weight: bold;
+}
+
+
+/* SECTION */
+
+.section {
+    padding: 110px 0;
+}
+
+.section-title {
+    margin-bottom: 55px;
+}
+
+.section-title p {
+    color: #d7ff00;
+    font-size: 13px;
+    font-weight: 900;
+    letter-spacing: 3px;
+    margin-bottom: 12px;
+}
+
+.section-title h2 {
+    font-size: clamp(35px, 5vw, 60px);
+    letter-spacing: -2px;
+}
+
+
+/* PROGRAMS */
+
+.program-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.program-card {
+    background: #111;
+    border: 1px solid #282828;
+    padding: 35px;
+    transition: 0.3s;
+}
+
+.program-card:hover {
+    transform: translateY(-8px);
+    border-color: #d7ff00;
+}
+
+.program-icon {
+    font-size: 40px;
+    margin-bottom: 25px;
+}
+
+.program-card h3 {
+    font-size: 23px;
+    margin-bottom: 15px;
+}
+
+.program-card p {
+    color: #999;
+    line-height: 1.7;
+    margin-bottom: 25px;
+}
+
+.program-card a {
+    color: #d7ff00;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+
+/* ABOUT */
+
+.about {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 600px;
+}
+
+.about-image {
+    overflow: hidden;
+}
+
+.about-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.about-content {
+    padding: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: #111;
+}
+
+.section-label {
+    font-weight: 900;
+    letter-spacing: 3px;
+    font-size: 13px;
+    margin-bottom: 15px;
+}
+
+.about-content h2,
+.bmi-container h2,
+.contact-container h2 {
+    font-size: clamp(40px, 5vw, 65px);
+    margin-bottom: 25px;
+    letter-spacing: -3px;
+}
+
+.about-content p {
+    color: #999;
+    line-height: 1.8;
+    margin-bottom: 18px;
+}
+
+.features {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.features strong {
+    color: #d7ff00;
+    margin-right: 8px;
+}
+
+
+/* GALLERY */
+
+.gallery {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr 1fr;
+    gap: 15px;
+}
+
+.gallery img {
+    width: 100%;
+    height: 330px;
+    object-fit: cover;
+    filter: grayscale(20%);
+    transition: 0.4s;
+}
+
+.gallery img:hover {
+    transform: scale(1.03);
+    filter: grayscale(0);
+}
+
+
+/* TRAINERS */
+
+.trainer-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.trainer-card {
+    background: #111;
+}
+
+.trainer-photo {
+    height: 400px;
+    background-size: cover;
+    background-position: center;
+}
+
+.trainer1 {
+    background-image: url("https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?auto=format&fit=crop&w=700&q=80");
+}
+
+.trainer2 {
+    background-image: url("https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=700&q=80");
+}
+
+.trainer3 {
+    background-image: url("https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?auto=format&fit=crop&w=700&q=80");
+}
+
+.trainer-info {
+    padding: 25px;
+}
+
+.trainer-info h3 {
+    font-size: 22px;
+}
+
+.trainer-info p {
+    color: #d7ff00;
+    margin-top: 7px;
+}
+
+
+/* PRICING */
+
+.pricing-section {
+    background: #0f0f0f;
+}
+
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.price-card {
+    background: #151515;
+    border: 1px solid #2b2b2b;
+    padding: 40px;
+    position: relative;
+}
+
+.price-card.popular {
+    border: 2px solid #d7ff00;
+}
+
+.popular-tag {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: #d7ff00;
+    color: #000;
+    padding: 8px 15px;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+.price-card h3 {
+    font-size: 18px;
+    letter-spacing: 2px;
+}
+
+.price {
+    font-size: 45px;
+    font-weight: 900;
+    margin: 25px 0;
+}
+
+.price small {
+    font-size: 14px;
+    color: #888;
+}
+
+.price-card ul {
+    list-style: none;
+    color: #aaa;
+    line-height: 2.5;
+    margin-bottom: 25px;
+}
+
+.price-card button,
+.submit-btn,
+.bmi-box button {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    background: #d7ff00;
+    color: #000;
+    font-weight: 900;
+    cursor: pointer;
+}
+
+
+/* BMI */
+
+.bmi-section {
+    background: #d7ff00;
+    color: #000;
+    padding: 90px 0;
+}
+
+.bmi-container {
+    display: grid;
+    grid-template-columns: 1fr 400px;
+    gap: 70px;
+    align-items: center;
+}
+
+.bmi-container .section-label {
+    color: #000;
+}
+
+.bmi-box {
+    background: #000;
+    padding: 30px;
+}
+
+.bmi-box input,
+.bmi-box select {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 12px;
+    background: #181818;
+    border: 1px solid #333;
+    color: white;
+}
+
+.bmi-box button {
+    margin-top: 5px;
+}
+
+#bmiResult {
+    color: white;
+    margin-top: 20px;
+    text-align: center;
+    line-height: 1.6;
+}
+
+
+/* CONTACT */
+
+.contact-section {
+    padding: 110px 0;
+}
+
+.contact-container {
+    display: grid;
+    grid-template-columns: 1.3fr 0.7fr;
+    gap: 70px;
+    align-items: center;
+}
+
+.contact-container p {
+    color: #999;
+    line-height: 1.7;
+}
+
+.contact-details {
+    background: #111;
+    border: 1px solid #292929;
+    padding: 35px;
+}
+
+.contact-details p {
+    margin-bottom: 20px;
+}
+
+
+/* FOOTER */
+
+footer {
+    border-top: 1px solid #242424;
+    padding: 35px 0;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #777;
+    font-size: 13px;
+}
+
+
+/* MODAL */
+
+.modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.85);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+    padding: 20px;
+}
+
+.modal.active {
+    display: flex;
+}
+
+.modal-box {
+    background: #151515;
+    border: 1px solid #333;
+    padding: 40px;
+    width: 100%;
+    max-width: 500px;
+    position: relative;
+}
+
+.modal-box h2 {
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+
+.modal-box p {
+    color: #888;
+    margin-bottom: 20px;
+}
+
+.modal-box input,
+.modal-box select {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 12px;
+    background: #0d0d0d;
+    color: white;
+    border: 1px solid #333;
+}
+
+.close-btn {
+    position: absolute;
+    right: 15px;
+    top: 12px;
+    background: none;
+    color: white;
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+#formMessage {
+    margin-top: 15px;
+    color: #d7ff00;
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+
+    nav {
+        display: none;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        background: #0d0d0d;
+        flex-direction: column;
+        padding: 25px;
+        gap: 20px;
+    }
+
+    nav.active {
+        display: flex;
+    }
+
+    .join-btn {
+        display: none;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    .hero h1 {
+        font-size: 65px;
+    }
+
+    .stats-grid,
+    .program-grid,
+    .trainer-grid,
+    .pricing-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .about {
+        grid-template-columns: 1fr;
+    }
+
+    .about-image {
+        height: 450px;
+    }
+
+    .gallery {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .bmi-container,
+    .contact-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .hero {
+        min-height: 650px;
+    }
+
+    .hero h1 {
+        font-size: 52px;
+        letter-spacing: -3px;
+    }
+
+    .hero-buttons {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .secondary-btn {
+        margin: 10px 0 0;
+        text-align: center;
+    }
+
+    .stats-grid,
+    .program-grid,
+    .trainer-grid,
+    .pricing-grid,
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .about-content {
+        padding: 50px 25px;
+    }
+
+    .features {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery img {
+        height: 280px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+}
